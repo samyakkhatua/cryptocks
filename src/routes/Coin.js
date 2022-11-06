@@ -2,7 +2,7 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
 import DOMPurify from 'dompurify'
-import { ImArrowLeft2 } from 'react-icons/im';
+// import { ImArrowLeft2 } from 'react-icons/im';
 import  {Link} from 'react-router-dom'
 
 import './Coin.css'
@@ -14,7 +14,7 @@ const Coin = () => {
 
     const url = `https://api.coingecko.com/api/v3/coins/${params.coinId}`
 
-    
+    // its okay
 
     useEffect(() => {
         axios.get(url).then((res) => {
@@ -29,7 +29,8 @@ const Coin = () => {
             <div className='coin-container'>
                 <div className='content'>
                     <div className='back-   `button'>
-                        <Link to="/"><ImArrowLeft2 /></Link>
+                        {/* <Link to="/"><ImArrowLeft2 /></Link> */}
+                        <Link to="/">ImArrowLeft2</Link>
                     </div>
                     <h1>{coin.name}</h1>
                 </div>
